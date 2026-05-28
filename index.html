@@ -1,0 +1,329 @@
+# Premium Gallery 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Memories</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#140016,#220022,#350033);
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+width:100%;
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.75)),
+url('https://i.ibb.co/hJcFHtnL/IMG-20260527-WA0005.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+animation:fadeIn 2s ease;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.08);
+padding:50px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 0 30px rgba(255,0,150,0.3);
+}
+
+.hero h1{
+font-size:75px;
+color:white;
+text-shadow:0 0 25px #ff4dd2;
+}
+
+.hero p{
+font-size:24px;
+margin-top:20px;
+line-height:1.8;
+color:#ffe6fa;
+}
+
+.hero button{
+margin-top:30px;
+padding:16px 40px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff4dd2,#8a2be2);
+color:white;
+cursor:pointer;
+transition:0.5s;
+box-shadow:0 0 25px #ff4dd2;
+}
+
+.hero button:hover{
+transform:scale(1.1);
+}
+
+/* QUOTES */
+
+.quote-box{
+width:90%;
+margin:80px auto;
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 30px rgba(255,0,140,0.15);
+}
+
+.quote-box h2{
+font-size:40px;
+margin-bottom:20px;
+color:#ff99eb;
+}
+
+.quote-box p{
+font-size:22px;
+line-height:2;
+color:#f7dfff;
+}
+
+/* GALLERY */
+
+.title{
+text-align:center;
+font-size:55px;
+margin-bottom:60px;
+color:#ff99eb;
+text-shadow:0 0 20px #ff4dd2;
+}
+
+.gallery{
+width:92%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding-bottom:80px;
+}
+
+.card{
+position:relative;
+overflow:hidden;
+border-radius:28px;
+background:white;
+box-shadow:0 0 25px rgba(255,0,150,0.2);
+transition:0.5s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 0 40px rgba(255,0,150,0.6);
+}
+
+.card img{
+width:100%;
+height:380px;
+object-fit:cover;
+transition:0.6s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:25px;
+background:linear-gradient(transparent,rgba(0,0,0,0.95));
+}
+
+.overlay h2{
+font-size:22px;
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:50px;
+background:black;
+padding:40px;
+text-align:center;
+border-top:2px solid #ff4dd2;
+}
+
+footer h2{
+font-size:35px;
+color:#ff99eb;
+margin-bottom:15px;
+}
+
+footer p{
+font-size:18px;
+line-height:1.8;
+color:#ddd;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.title{
+font-size:38px;
+}
+
+.quote-box h2{
+font-size:30px;
+}
+
+.quote-box p{
+font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Golden Memories ✨</h1>
+
+<p>
+ જીવન મળ્યું છે તો આનંદ થી વિતાવો મારા વાલા !!!
+આપણે બીજા ની નઈ ! પણ...  બીજા  આપણી બળતરા કરે તેવું જીવો !!!
+</p>
+
+<button onclick="scrollGallery()">Explore Memories</button>
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<div class="quote-box">
+<h2> કેટલીક યાદો ક્યારેય ઝાંખી પડતી નથી.
+તે આપણા હૃદયમાં કાયમ રહે છે અને જીવનનો સૌથી સુંદર ભાગ બની જાય છે..
+ 💫</h2>
+<p>
+"દરેક ફોટો એક સુંદર કહાની કહે છે જે ખુશી, પ્રેમ, સ્મિતો અને અવિસ્મરણીય ક્ષણોથી ભરેલું હોય છે" ✨
+</p>
+</div>
+
+<h1 class="title" id="gallery">Our Beautiful Collection</h1>
+
+<!-- GALLERY -->
+
+<div class="gallery">
+
+<div class="card"><img src="https://i.ibb.co/hJcFHtnL/IMG-20260527-WA0005.jpg"><div class="overlay"><h2>Elegant Smile ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/DgGDqWdn/IMG-20260527-WA0010.jpg"><div class="overlay"><h2>Golden Vibes 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/bjRLkQ6X/IMG-20260527-WA0011.jpg"><div class="overlay"><h2>Beautiful Moments 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/ccdpLcxr/IMG-20260527-WA0013.jpg"><div class="overlay"><h2>Luxury Memories ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/s905vrD7/IMG-20260527-WA0014.jpg"><div class="overlay"><h2>Lovely Collection 💫</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/wZW43Fb4/IMG-20260527-WA0015.jpg"><div class="overlay"><h2>Royal Beauty 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/tTh3RNht/IMG-20260527-WA0016.jpg"><div class="overlay"><h2>Shining Day 🌹</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/wh5tGq30/IMG-20260527-WA0017.jpg"><div class="overlay"><h2>Perfect Memories ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/PsbLyg3H/IMG-20260527-WA0018.jpg"><div class="overlay"><h2>Sweet Moments 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/YT78gcnx/IMG-20260527-WA0019.jpg"><div class="overlay"><h2>Luxury Style 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/KcbTJMWG/IMG-20260527-WA0020.jpg"><div class="overlay"><h2>Golden Collection ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/0RbZy13F/IMG-20260527-WA0021.jpg"><div class="overlay"><h2>Dreamy Look 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/RkXyKNNP/IMG-20260527-WA0022.jpg"><div class="overlay"><h2>Stylish Beauty 🌹</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/XxPVWtP0/IMG-20260527-WA0023.jpg"><div class="overlay"><h2>Soft Elegance ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/0px7q70W/IMG-20260527-WA0024.jpg"><div class="overlay"><h2>Lovely Smile 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/sdHkq4wX/IMG-20260527-WA0025.jpg"><div class="overlay"><h2>Royal Moments 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/fdWCdDZy/IMG-20260527-WA0026.jpg"><div class="overlay"><h2>Golden Beauty ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/VYSC8z0d/IMG-20260527-WA0027.jpg"><div class="overlay"><h2>Elegant Memories 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/mrxNK3Zj/IMG-20260527-WA0028.jpg"><div class="overlay"><h2>Beautiful Vibes 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/5hLVmGGQ/IMG-20260527-WA0029.jpg"><div class="overlay"><h2>Luxury Feel ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/jktjqjNL/IMG-20260527-WA0030.jpg"><div class="overlay"><h2>Sweet Collection 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/21TLb323/IMG-20260527-WA0031.jpg"><div class="overlay"><h2>Golden Day 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/HfBgr8Pm/IMG-20260527-WA0032.jpg"><div class="overlay"><h2>Dream Memories ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/g0zhPrL/IMG-20260527-WA0033.jpg"><div class="overlay"><h2>Beautiful Moments 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/Zz9jhVv3/IMG-20260527-WA0034.jpg"><div class="overlay"><h2>Elegant Style 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/SDQgyRGD/IMG-20260527-WA0035.jpg"><div class="overlay"><h2>Lovely Beauty ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/BHxDVhTQ/IMG-20260527-WA0036.jpg"><div class="overlay"><h2>Luxury Collection 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/m5wXYNqx/IMG-20260527-WA0037.jpg"><div class="overlay"><h2>Golden Elegance 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/0yDJzHkn/IMG-20260527-WA0038.jpg"><div class="overlay"><h2>Dreamy Smile ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/qFLBLSHN/IMG-20260527-WA0039.jpg"><div class="overlay"><h2>Royal Moments 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/nsDBY5jd/IMG-20260527-WA0040.jpg"><div class="overlay"><h2>Elegant Beauty 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/b5nVnV1p/IMG-20260527-WA0041.jpg"><div class="overlay"><h2>Luxury Memories ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/mVwFvBsQ/IMG-20260527-WA0042.jpg"><div class="overlay"><h2>Lovely Vibes 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/7t99Lr0c/IMG-20260527-WA0043.jpg"><div class="overlay"><h2>Beautiful Collection 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/yc83gqyj/IMG-20260527-WA0044.jpg"><div class="overlay"><h2>Golden Memories ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/G3f2zqYP/IMG-20260527-WA0045.jpg"><div class="overlay"><h2>Elegant Day 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/MkNCs3kg/IMG-20260527-WA0046.jpg"><div class="overlay"><h2>Sweet Smile 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/PZVmmTV9/IMG-20260527-WA0047.jpg"><div class="overlay"><h2>Luxury Moments ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/gLrTnDXx/IMG-20260527-WA0048.jpg"><div class="overlay"><h2>Dream Collection 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/tTYPzL3L/IMG-20260527-WA0049.jpg"><div class="overlay"><h2>Beautiful Style 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/5XtZ9L0h/IMG-20260527-WA0050.jpg"><div class="overlay"><h2>Golden Beauty ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/GfJqkYqc/IMG-20260527-WA0051.jpg"><div class="overlay"><h2>Lovely Collection 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/Pb2F8HH/IMG-20260527-WA0052.jpg"><div class="overlay"><h2>Elegant Moments 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/PG6gFYDS/IMG-20260527-WA0053.jpg"><div class="overlay"><h2>Luxury Smile ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/zKfbh3J/IMG-20260527-WA0054.jpg"><div class="overlay"><h2>Golden Day 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/LXnZtVr5/IMG-20260527-WA0055.jpg"><div class="overlay"><h2>Dreamy Beauty 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/ycD4Rhjz/IMG-20260527-WA0056.jpg"><div class="overlay"><h2>Royal Style ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/cdSfPR2/IMG-20260527-WA0057.jpg"><div class="overlay"><h2>Beautiful Vibes 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/VpTs7rHP/IMG-20260527-WA0058.jpg"><div class="overlay"><h2>Elegant Collection 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/fdKpWRqM/IMG-20260527-WA0059.jpg"><div class="overlay"><h2>Luxury Moments ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/LXrtG4DX/IMG-20260527-WA0060.jpg"><div class="overlay"><h2>Golden Memories 💕</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/Q5PJDgg/IMG-20260527-WA0061.jpg"><div class="overlay"><h2>Dream Beauty 🌸</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/d4nVbf5X/IMG-20260527-WA0062.jpg"><div class="overlay"><h2>Royal Elegance ✨</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/G4Hqq7nH/IMG-20260527-WA0063.jpg"><div class="overlay"><h2>Lovely Memories 💖</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/hJmtZLg2/IMG-20260527-WA0064.jpg"><div class="overlay"><h2>Beautiful Moments 🌷</h2></div></div>
+<div class="card"><img src="https://i.ibb.co/h5Y9qBh/IMG-20260527-WA0065.jpg"><div class="overlay"><h2>Golden Style ✨</h2></div></div>
+
+
